@@ -1,0 +1,4 @@
+/home/sgs/usr/local/clion-2018.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=/home/sgs/android/sdk/android-sdk-linux/android-ndk-r16b -DCMAKE_SYSTEM_VERSION=26 -DCMAKE_C_FLAGS= -DCMAKE_CXX_FLAGS= -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_SHARED_LINKER_FLAGS='-latomic' -G "CodeBlocks - Unix Makefiles" /home/sgs/code/github/c/ExceptionControl
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sgs/code/github/c/ExceptionControl/cmake-build-arm-v7a

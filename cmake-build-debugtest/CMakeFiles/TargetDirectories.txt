@@ -1,0 +1,3 @@
+/home/sgs/code/github/c/ExceptionControl/cmake-build-debugtest/CMakeFiles/rebuild_cache.dir
+/home/sgs/code/github/c/ExceptionControl/cmake-build-debugtest/CMakeFiles/edit_cache.dir
+/home/sgs/code/github/c/ExceptionControl/cmake-build-debugtest/CMakeFiles/ExceptionControl.dir

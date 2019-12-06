@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.6.0-rc2)
+cmake_minimum_required(VERSION 3.12.1)
+project(ExceptionControl)
+
+set(NDK_INCLUDE, /home/sgs/android/sdk/android-sdk-linux/android-ndk-r16b/sysroot/usr/include)
+set(LIB_INCLUDE, /home/sgs/android/sdk/android-sdk-linux/android-ndk-r16b/platforms/android-26/arch-arm64/usr/lib)
+set(CMAKE_CXX_STANDARD 14)
+option (USE_MYMATH "Use tutorial provided math implementation" ON)
+if (USE_MYMATH)
+    include_directories(${NDK_INCLUDE})
+    link_directories(${LIB_INCLUDE})
+    link_libraries(liblog.so)
+endif (USE_MYMATH)
+add_executable(ExceptionControl main.cpp Control.cpp Control.h Signal.cpp Signal.h SignalRecode.cpp SignalRecode.h utils/LogUtils.h)
+
+if (USE_MYMATH)
+    target_link_libraries(ExceptionControl liblog.so)
+endif (USE_MYMATH)
+
+find_package(Threads REQUIRED)
+target_link_libraries(ExceptionControl Threads::Threads)
+target_link_libraries(ExceptionControl atomic.so)
